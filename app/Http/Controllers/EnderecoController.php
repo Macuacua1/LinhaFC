@@ -9,10 +9,10 @@ use Illuminate\Http\Request;
 
 class EnderecoController extends Controller
 {
-//    public function __construct()
-//    {
-//        $this->middleware('auth');
-//    }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function provfunct(){
 
         $prov=Provincia::all();//get data from table
@@ -27,7 +27,7 @@ class EnderecoController extends Controller
         //if our chosen id and products table prod_cat_id col match the get first 100 data
 
         //$request->id here is the id of our chosen option id
-        $data=Distrito::select('distritonome','id')->where('provincia_id',$request->id)->take(100)->get();
+        $data=Distrito::select('distritonome','id')->where('provincia_id',$request->id)->get();
         return response()->json($data);//then sent this data to ajax success
     }
 
@@ -39,7 +39,11 @@ class EnderecoController extends Controller
 //
 //        return response()->json($p);
         //$request->id here is the id of our chosen option id
-        $data=Localidade::select('localidadenome','id')->where('distrito_id',$request->id)->take(100)->get();
+        $data=Localidade::select('localidadenome','id')->where('distrito_id',$request->id)->get();
         return response()->json($data);//then sent this data to ajax success
     }
+public function addcontacto(Request $request){
+    dd($request->all());
+}
+
 }

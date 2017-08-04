@@ -141,6 +141,10 @@ protected function getLogout(Request $request)
 
         return redirect('login');
     }
+    protected function guard()
+    {
+        return Auth::guard();
+    }
 
 
 

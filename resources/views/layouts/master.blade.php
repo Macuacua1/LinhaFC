@@ -39,47 +39,47 @@
 
 </head>
 <body>
-{{--<div class="loader-bg"></div>--}}
-{{--<div class="loader">--}}
-    {{--<div class="preloader-wrapper big active">--}}
-        {{--<div class="spinner-layer spinner-blue">--}}
-            {{--<div class="circle-clipper left">--}}
-                {{--<div class="circle"></div>--}}
-            {{--</div><div class="gap-patch">--}}
-                {{--<div class="circle"></div>--}}
-            {{--</div><div class="circle-clipper right">--}}
-                {{--<div class="circle"></div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<div class="spinner-layer spinner-teal lighten-1">--}}
-            {{--<div class="circle-clipper left">--}}
-                {{--<div class="circle"></div>--}}
-            {{--</div><div class="gap-patch">--}}
-                {{--<div class="circle"></div>--}}
-            {{--</div><div class="circle-clipper right">--}}
-                {{--<div class="circle"></div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<div class="spinner-layer spinner-yellow">--}}
-            {{--<div class="circle-clipper left">--}}
-                {{--<div class="circle"></div>--}}
-            {{--</div><div class="gap-patch">--}}
-                {{--<div class="circle"></div>--}}
-            {{--</div><div class="circle-clipper right">--}}
-                {{--<div class="circle"></div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<div class="spinner-layer spinner-green">--}}
-            {{--<div class="circle-clipper left">--}}
-                {{--<div class="circle"></div>--}}
-            {{--</div><div class="gap-patch">--}}
-                {{--<div class="circle"></div>--}}
-            {{--</div><div class="circle-clipper right">--}}
-                {{--<div class="circle"></div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-{{--</div>--}}
+<div class="loader-bg"></div>
+<div class="loader">
+    <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="spinner-layer spinner-teal lighten-1">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="spinner-layer spinner-yellow">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="spinner-layer spinner-green">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="mn-content fixed-sidebar">
     <header class="mn-header navbar-fixed" style="background-color: #32c787 !important;">
         <nav class="cyan darken-1"  style="background-color: #32c787 !important;">
@@ -201,7 +201,7 @@
                     <div class="card card-transparent">
                         <div class="row valign-wrapper">
                             <div class="col s3">
-                                <img src="assets/images/profile-image-1.png" alt="" class="circle responsive-img z-depth-1">
+                                <img src="/img/lfc_logo_name.png" alt="" class="circle responsive-img z-depth-1">
                             </div>
                             <div class="col s9">
                                         <span class="search-result-text">
@@ -213,7 +213,7 @@
                     <div class="card card-transparent">
                         <div class="row valign-wrapper">
                             <div class="col s3">
-                                <img src="assets/images/profile-image-3.jpg" alt="" class="circle responsive-img z-depth-1">
+                                <img src="/img/lfc_logo_name.png" alt="" class="circle responsive-img z-depth-1">
                             </div>
                             <div class="col s9">
                                         <span class="search-result-text">
@@ -225,7 +225,7 @@
                     <div class="card card-transparent">
                         <div class="row valign-wrapper">
                             <div class="col s3">
-                                <img src="assets/images/profile-image.png" alt="" class="circle responsive-img z-depth-1">
+                                <img src="/img/lfc_logo_name.png" alt="" class="circle responsive-img z-depth-1">
                             </div>
                             <div class="col s9">
                                         <span class="search-result-text">
@@ -308,7 +308,7 @@
                     <a href="javascript:void(0)" class="chat-message">
                         <div class="chat-item">
                             <div class="chat-item-image">
-                                <img src="assets/images/profile-image.png" class="circle" alt="">
+                                <img src="/img/lfc_logo_name.png" class="circle" alt="">
                             </div>
                             <div class="chat-item-info">
                                 <p class="chat-name">John Doe</p>
@@ -319,7 +319,7 @@
                     <a href="javascript:void(0)" class="chat-message">
                         <div class="chat-item">
                             <div class="chat-item-image">
-                                <img src="assets/images/profile-image-1.png" class="circle" alt="">
+                                <img src="/img/lfc_logo_name.png" class="circle" alt="">
                             </div>
                             <div class="chat-item-info">
                                 <p class="chat-name">Tom Simpson</p>
@@ -330,7 +330,7 @@
                     <a href="javascript:void(0)" class="chat-message">
                         <div class="chat-item">
                             <div class="chat-item-image">
-                                <img src="assets/images/profile-image-3.jpg" class="circle" alt="">
+                                <img src="/img/lfc_logo_name.png" class="circle" alt="">
                             </div>
                             <div class="chat-item-info">
                                 <p class="chat-name">Alan Grey</p>
@@ -340,7 +340,7 @@
                     <a href="javascript:void(0)" class="chat-message">
                         <div class="chat-item">
                             <div class="chat-item-image">
-                                <img src="assets/images/profile-image.png" class="circle" alt="">
+                                <img src="/img/lfc_logo_name.png" class="circle" alt="">
                             </div>
                             <div class="chat-item-info">
                                 <p class="chat-name">Michael Fisher</p>
@@ -351,7 +351,7 @@
                     <a href="javascript:void(0)" class="chat-message">
                         <div class="chat-item">
                             <div class="chat-item-image">
-                                <img src="assets/images/profile-image-1.png" class="circle" alt="">
+                                <img src="/img/lfc_logo_name.png" class="circle" alt="">
                             </div>
                             <div class="chat-item-info">
                                 <p class="chat-name">Amily Lee</p>
@@ -362,7 +362,7 @@
                     <a href="javascript:void(0)" class="chat-message">
                         <div class="chat-item">
                             <div class="chat-item-image">
-                                <img src="assets/images/profile-image.png" class="circle" alt="">
+                                <img src="/img/lfc_logo_name.png" class="circle" alt="">
                             </div>
                             <div class="chat-item-info">
                                 <p class="chat-name">Sandra Smith</p>
@@ -373,7 +373,7 @@
                     <a href="javascript:void(0)" class="chat-message">
                         <div class="chat-item">
                             <div class="chat-item-image">
-                                <img src="assets/images/profile-image-3.jpg" class="circle" alt="">
+                                <img src="/img/lfc_logo_name.png" class="circle" alt="">
                             </div>
                             <div class="chat-item-info">
                                 <p class="chat-name">Sandra Smith</p>
@@ -478,27 +478,27 @@
         <p class="sidebar-chat-name">Tom Simpson<a href="#" data-activates="chat-messages" class="chat-message-link"><i class="material-icons">keyboard_arrow_right</i></a></p>
         <div class="messages-container">
             <div class="message-wrapper them">
-                <div class="circle-wrapper"><img src="assets/images/profile-image-1.png" class="circle" alt=""></div>
+                <div class="circle-wrapper"><img src="/img/lfc_logo_name.png" class="circle" alt=""></div>
                 <div class="text-wrapper">Lorem Ipsum</div>
             </div>
             <div class="message-wrapper me">
-                <div class="circle-wrapper"><img src="assets/images/profile-image-3.jpg" class="circle" alt=""></div>
+                <div class="circle-wrapper"><img src="/img/lfc_logo_name.png" class="circle" alt=""></div>
                 <div class="text-wrapper">Integer in faucibus diam?</div>
             </div>
             <div class="message-wrapper them">
-                <div class="circle-wrapper"><img src="assets/images/profile-image-1.png" class="circle" alt=""></div>
+                <div class="circle-wrapper"><img src="/img/lfc_logo_name.png" class="circle" alt=""></div>
                 <div class="text-wrapper">Vivamus quis neque volutpat, hendrerit justo vitae, suscipit dui</div>
             </div>
             <div class="message-wrapper me">
-                <div class="circle-wrapper"><img src="assets/images/profile-image-3.jpg" class="circle" alt=""></div>
+                <div class="circle-wrapper"><img src="/img/lfc_logo_name.png" class="circle" alt=""></div>
                 <div class="text-wrapper">Suspendisse condimentum tortor et lorem pretium</div>
             </div>
             <div class="message-wrapper them">
-                <div class="circle-wrapper"><img src="assets/images/profile-image-1.png" class="circle" alt=""></div>
+                <div class="circle-wrapper"><img src="/img/lfc_logo_name.png" class="circle" alt=""></div>
                 <div class="text-wrapper">dolore eu fugiat nulla pariatur</div>
             </div>
             <div class="message-wrapper me">
-                <div class="circle-wrapper"><img src="assets/images/profile-image-3.jpg" class="circle" alt=""></div>
+                <div class="circle-wrapper"><img src="/img/lfc_logo_name.png" class="circle" alt=""></div>
                 <div class="text-wrapper">Duis maximus leo eget massa porta</div>
             </div>
         </div>
@@ -528,11 +528,12 @@
                     </li>
                     <li class="divider"></li>
                     <li class="no-padding">
-                        <a class="waves-effect waves-grey"><i class="material-icons">exit_to_app</i>Sign Out</a>
-                    </li>
+                        <a href="{{route('logout')}}" id="logout" type="submit" class="waves-effect waves-grey"><i class="material-icons">exit_to_app</i>Sign Out</a>
+                        </li>
                 </ul>
             </div>
             <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
+                @if(Auth::user()->role_id=1)
                 <li class="no-padding active"><a class="waves-effect waves-grey active" href="{{url('/')}}"><i class="material-icons">home</i>Home</a></li>
 
                 <li class="no-padding">
@@ -546,6 +547,7 @@
                         </ul>
                     </div>
                 </li>
+                @elseif(Auth::user()->role_id=2)
                 <li class="no-padding">
                     <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">mode_edit</i>Forms<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
                     <div class="collapsible-body">
@@ -560,6 +562,8 @@
                         </ul>
                     </div>
                 </li>
+                    {{--@endif--}}
+                @elseif(Auth::user()->role_id=3)
                 <li class="no-padding">
                     <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">grid_on</i>Tables<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
                     <div class="collapsible-body">
@@ -571,6 +575,8 @@
                         </ul>
                     </div>
                 </li>
+                    {{--@endif--}}
+                @else
                 <li class="no-padding"><a class="waves-effect waves-grey" href="charts.html"><i class="material-icons">trending_up</i>Charts</a></li>
                 <li class="no-padding">
                     <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">tag_faces</i>Extra Pages<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
@@ -594,6 +600,8 @@
                         </ul>
                     </div>
                 </li>
+                    @endif
+
             </ul>
             <div class="footer">
                 <p class="copyright">© Linha Fala Criança </p>
@@ -611,9 +619,9 @@
         <div class="inner-sidebar">
             <span class="inner-sidebar-title">New Messages</span>
             <div class="message-list">
-                <div class="info-item message-item"><img class="circle" src="assets/images/profile-image-2.png" alt=""><div class="message-info"><div class="message-author">Ned Flanders</div><small>3 hours ago</small></div></div>
-                <div class="info-item message-item"><img class="circle" src="assets/images/profile-image.png" alt=""><div class="message-info"><div class="message-author">Peter Griffin</div><small>4 hours ago</small></div></div>
-                <div class="info-item message-item"><img class="circle" src="assets/images/profile-image-1.png" alt=""><div class="message-info"><div class="message-author">Lisa Simpson</div><small>2 days ago</small></div></div>
+                <div class="info-item message-item"><img class="circle" src="/img/lfc_logo_name.png" alt=""><div class="message-info"><div class="message-author">Ned Flanders</div><small>3 hours ago</small></div></div>
+                <div class="info-item message-item"><img class="circle" src="/img/lfc_logo_name.png" alt=""><div class="message-info"><div class="message-author">Peter Griffin</div><small>4 hours ago</small></div></div>
+                <div class="info-item message-item"><img class="circle" src="/img/lfc_logo_name.png" alt=""><div class="message-info"><div class="message-author">Lisa Simpson</div><small>2 days ago</small></div></div>
             </div>
             <span class="inner-sidebar-title">Events</span>
             <span class="info-item">Envato meeting<span class="new badge">12</span></span>
@@ -632,38 +640,74 @@
 <div class="left-sidebar-hover right"></div>
 
 
-<!-- Javascripts -->
+{{--<!-- Javascripts -->--}}
 {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>--}}
 {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>--}}
 
-<script src="/js/jquery-2.2.0.min.js"></script>
-<script src="/js/materialize.min.js"></script>
-<script src="/js/materialPreloader.min.js"></script>
-<script src="/js/alpha.min.js"></script>
-<script src="/js/dashboard.js"></script>
-<script src="/js/jquery.blockui.js"></script>
-<script src="/js/jquery.waypoints.min.js"></script>
-<script src="/js/jquery.counterup.min.js"></script>
-<script src="/js/jquery.sparkline.min.js"></script>
-<script src="/js/chart.min.js"></script>
-<script src="/js/jquery.flot.min.js"></script>
-<script src="/js/jquery.flot.time.min.js"></script>
-<script src="/js/jquery.flot.symbol.min.js"></script>
-<script src="/js/jquery.flot.resize.min.js"></script>
-<script src="/js/jquery.flot.tooltip.min.js"></script>
-<script src="/js/curvedLines.js"></script>
-<script src="/js/jquery.peity.min.js"></script>
+{{--<script src="/js/jquery-2.2.0.min.js"></script>--}}
+{{--<script src="/js/materialize.min.js"></script>--}}
+{{--<script src="/js/materialPreloader.min.js"></script>--}}
+{{--<script src="/js/alpha.min.js"></script>--}}
+{{--<script src="/js/dashboard.js"></script>--}}
+{{--<script src="/js/jquery.blockui.js"></script>--}}
+{{--<script src="/js/jquery.waypoints.min.js"></script>--}}
+{{--<script src="/js/jquery.counterup.min.js"></script>--}}
+{{--<script src="/js/jquery.sparkline.min.js"></script>--}}
+{{--<script src="/js/chart.min.js"></script>--}}
+{{--<script src="/js/jquery.flot.min.js"></script>--}}
+{{--<script src="/js/jquery.flot.time.min.js"></script>--}}
+{{--<script src="/js/jquery.flot.symbol.min.js"></script>--}}
+{{--<script src="/js/jquery.flot.resize.min.js"></script>--}}
+{{--<script src="/js/jquery.flot.tooltip.min.js"></script>--}}
+{{--<script src="/js/curvedLines.js"></script>--}}
+{{--<script src="/js/jquery.peity.min.js"></script>--}}
 
-<script src="/js/select2.min.js"></script>
-<script src="/js/form-select2.js"></script>
-<script src="/js/form-input-mask.js"></script>
-<script src="/js/jquery.inputmask.bundle.js"></script>
-<script src="/js/select2.full.min.js"></script>
-<script src="/js/init.js"></script>
+{{--<script src="/js/select2.min.js"></script>--}}
+{{--<script src="/js/form-select2.js"></script>--}}
+{{--<script src="/js/form-input-mask.js"></script>--}}
+{{--<script src="/js/jquery.inputmask.bundle.js"></script>--}}
+{{--<script src="/js/select2.full.min.js"></script>--}}
+{{--<script src="/js/init.js"></script>--}}
 {{----}}
 {{--<script type="text/javascript">--}}
 
     {{--$(document).ready(function(){--}}
+{{--//        $.ajaxSetup({--}}
+{{--//            headers: {--}}
+{{--//                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')--}}
+{{--//            }--}}
+{{--//        });--}}
+
+{{--//        $('#registar-contacto').on('click', function (e) {--}}
+{{--//            alert('Heheehehehehy');--}}
+{{--//            e.preventDefault();--}}
+{{--//--}}
+{{--//            var dados = $('#addcontacto').serialize();--}}
+{{--//--}}
+{{--//            $.ajax({--}}
+{{--//                method: 'Post',--}}
+{{--//                url: '/registarcontacto',--}}
+{{--////                enctype: 'multipart/form-data',--}}
+{{--//                data: dados,--}}
+{{--//                success: function (data) {--}}
+{{--//--}}
+{{--//                    if (data) {--}}
+{{--//--}}
+{{--//                        setTimeout(function(){ Materialize.toast('Registado com Sucesso!', 4000) }, 4000);--}}
+{{--//                        $('#addcontacto')[0].reset();--}}
+{{--////                        window.location.href = '/';--}}
+{{--//                        alert('Salvo com Sucesso!');--}}
+{{--//--}}
+{{--//                    }--}}
+{{--//                    else {--}}
+{{--//                        alert(error)--}}
+{{--//--}}
+{{--//                    }--}}
+{{--//                }--}}
+{{--//            });--}}
+{{--//--}}
+{{--//        })--}}
+
     {{--alert('Script lido com sucesso');--}}
     {{--$(document).on('change','.provincia',function(){--}}
     {{--alert('Changed com sucesso');--}}
@@ -731,38 +775,80 @@
 
     {{--});--}}
     {{--</script>--}}
-<script type="text/javascript">
+{{--<script type="text/javascript">--}}
 
-    $("#case").hide();
-    $("#notcase").hide();
-    $("#addmorepessoas").hide();
-    $("#addmorepessoas1").hide();
-    $("#addmorepessoas2").hide();
-    function showHidecaso() {
-        if(document.getElementById('naocaso').checked) {
-            $("#case").show();
-            $("#notcase").hide();
-            $("#addmorepessoas").hide();
-            $("#addmorepessoas1").hide();
-            $("#addmorepessoas2").hide()
-        } else {
-            $("#notcase").show();
-            $("#case").hide();
-        }
-    }
+    {{--$("#case").hide();--}}
+    {{--$("#notcase").hide();--}}
+    {{--$("#addmorepessoas").hide();--}}
+    {{--$("#addmorepessoas1").hide();--}}
+    {{--$("#addmorepessoas2").hide();--}}
+    {{--function showHidecaso() {--}}
+        {{--if(document.getElementById('naocaso').checked) {--}}
+            {{--$("#case").show();--}}
+            {{--$("#notcase").hide();--}}
+            {{--$("#addmorepessoas").hide();--}}
+            {{--$("#addmorepessoas1").hide();--}}
+            {{--$("#addmorepessoas2").hide()--}}
+        {{--} else {--}}
+            {{--$("#notcase").show();--}}
+            {{--$("#case").hide();--}}
+        {{--}--}}
+    {{--}--}}
 
-    function addpessoa() {
-        if(document.getElementById('addpessoas').checked) {
-            $("#addmorepessoas").show();
-            $("#addmorepessoas1").show();
-            $("#addmorepessoas2").show();
-        }else {
-            $("#addmorepessoas").hide();
-            $("#addmorepessoas1").hide();
-            $("#addmorepessoas2").hide();
-        }
-    }
-</script>
+    {{--function addpessoa() {--}}
+        {{--if(document.getElementById('addpessoas').checked) {--}}
+            {{--$("#addmorepessoas").show();--}}
+            {{--$("#addmorepessoas1").show();--}}
+            {{--$("#addmorepessoas2").show();--}}
+        {{--}else {--}}
+            {{--$("#addmorepessoas").hide();--}}
+            {{--$("#addmorepessoas1").hide();--}}
+            {{--$("#addmorepessoas2").hide();--}}
+        {{--}--}}
+    {{--}--}}
+{{--</script>--}}
+{{--<script>--}}
+    {{--$(document).ready(function () {--}}
+        {{--$.ajaxSetup({--}}
+            {{--headers: {--}}
+                {{--'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')--}}
+            {{--}--}}
+        {{--});--}}
+
+        {{--$('#registar-contacto').on('click', function (e) {--}}
+            {{--alert('Heheehehehehy');--}}
+            {{--e.preventDefault();--}}
+
+            {{--var dados = $('#addcontacto').serialize();--}}
+
+            {{--$.ajax({--}}
+                {{--method: 'Post',--}}
+                {{--url: '/registarcontacto',--}}
+{{--//                enctype: 'multipart/form-data',--}}
+                {{--data: dados,--}}
+                {{--success: function (data) {--}}
+
+                    {{--if (data) {--}}
+
+                        {{--setTimeout(function(){ Materialize.toast('Registado com Sucesso!', 4000) }, 4000);--}}
+                        {{--$('#addcontacto')[0].reset();--}}
+{{--//                        window.location.href = '/';--}}
+                        {{--alert('Salvo com Sucesso!');--}}
+
+                    {{--}--}}
+                    {{--else {--}}
+                        {{--alert(error)--}}
+
+                    {{--}--}}
+                {{--}--}}
+            {{--});--}}
+
+        {{--})--}}
+
+
+    {{--});--}}
+{{--</script>--}}
+@include('admin.partials.javascript')
 </body>
 
 </html>

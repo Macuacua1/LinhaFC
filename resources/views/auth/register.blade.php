@@ -144,9 +144,12 @@
                 success: function (data) {
 
                     if (data) {
-//                        window.location.href = '/';
-//                        alert('Salvo com Sucesso!');
+
+                        setTimeout(function(){ Materialize.toast('Registado com Sucesso!', 4000) }, 4000);
                         $('#form-criar-conta')[0].reset();
+                        window.location.href = '/';
+//                        alert('Salvo com Sucesso!');
+
                     }
                     else {
                         alert(error)

@@ -23,11 +23,13 @@ Route::get('/findDistrito','EnderecoController@findDistrito');
 Route::get('/findLocalidade','EnderecoController@findLocalidade');
 Route::post('/criar-conta','UserController@criarConta');
 Route::get('perfil','UserController@getPerfil');
+Route::resource('contacto','ContactoController');
+Route::post('/registarcontacto','EnderecoController@addcontacto');
 //Route::post('/register','Auth/RegisterController@register');
 
 //Route::get('login', 'Auth\AuthController@getLogin');
 //Route::post('login', ['as' =>'login', 'uses' => 'Auth\AuthController@postLogin']);
-//Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@getLogout']);
+Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@getLogout']);
 //
 //// Registration routes...
 //Route::get('register', 'Auth\AuthController@getRegister');

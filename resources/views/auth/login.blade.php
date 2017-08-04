@@ -136,15 +136,14 @@ url: '/login',
 data: dados,
 success: function (data) {
 //
-//if (data) {
-//    window.location.href = '/';
-////                        alert('Salvo com Sucesso!');
-//$('#form-criar-conta')[0].reset();
-//}
-//else {
-//alert(error)
-//
-//}
+if (data) {
+    window.location.href = '/';
+
+}
+else {
+    window.location.href = '/login';
+
+}
 }
 });
 
