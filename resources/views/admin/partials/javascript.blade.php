@@ -101,7 +101,6 @@
             });
         });
 
-
         $(document).on('change','.distritonome',function(){
             console.log("hmm its change");
 
