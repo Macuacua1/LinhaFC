@@ -16,9 +16,15 @@
     <link rel="icon" href="/img/lfc_logo.png">
 
     <!-- Styles -->
-    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"/>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/MetroJs.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" integrity="sha256-IPtNBA1od/cGBfXTxYDxuT5+Y2BKy14o6j0FaIXDmYk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">       
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js" integrity="sha256-SHXnnZAbgSEf+OBhDLR7I2mx9vNZAIzPeCGhxRV+VQw=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha256-JtQPj/3xub8oapVMaIijPNoM0DHoAtgh/gwFYuN5rik=" crossorigin="anonymous"></script>
     {{--<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css"/>--}}
     {{--<link href="/css/select2.css" rel="stylesheet">--}}
     {{--<link href="/css/select2.min.css" rel="stylesheet">--}}
@@ -39,7 +45,7 @@
 
 </head>
 <body>
-<div class="loader-bg"></div>
+
 <div class="loader">
     <div class="preloader-wrapper big active">
         <div class="spinner-layer spinner-blue">
@@ -641,8 +647,7 @@
 
 
 {{--<!-- Javascripts -->--}}
-{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>--}}
-{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>--}}
+
 
 {{--<script src="/js/jquery-2.2.0.min.js"></script>--}}
 {{--<script src="/js/materialize.min.js"></script>--}}
