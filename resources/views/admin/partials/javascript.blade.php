@@ -2,22 +2,21 @@
 {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>--}}
 {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>--}}
 
-<script src="/js/jquery-2.2.0.min.js"></script>
-<script src="/js/materialize.min.js"></script>
+{{--  <script src="/js/jquery-2.2.0.min.js"></script>  --}}
+{{--  <script src="/js/materialize.min.js"></script>  --}}
 <script src="/js/materialPreloader.min.js"></script>
 <script src="/js/alpha.min.js"></script>
 <script src="/js/dashboard.js"></script>
 
 <script src="/js/jquery.blockui.js"></script>
 <script src="/js/jquery.waypoints.min.js"></script>
-<script src="/js/jquery.counterup.min.js"></script>
 <script src="/js/jquery.sparkline.min.js"></script>
 <script src="/js/chart.min.js"></script>
-{{--<script src="/js/jquery.flot.min.js"></script>--}}
-{{--<script src="/js/jquery.flot.time.min.js"></script>--}}
-{{--<script src="/js/jquery.flot.symbol.min.js"></script>--}}
-{{--<script src="/js/jquery.flot.resize.min.js"></script>--}}
-{{--<script src="/js/jquery.flot.tooltip.min.js"></script>--}}
+<script src="/js/jquery.flot.min.js"></script>
+<script src="/js/jquery.flot.time.min.js"></script>
+<script src="/js/jquery.flot.symbol.min.js"></script>
+<script src="/js/jquery.flot.resize.min.js"></script>
+<script src="/js/jquery.flot.tooltip.min.js"></script>
 <script src="/js/curvedLines.js"></script>
 <script src="/js/jquery.peity.min.js"></script>
 
@@ -167,6 +166,15 @@
     }
 </script>
 <script>
+
+    $(window).on('load', function() {
+        //  $('.preloader-background').delay(1700).fadeOut('slow'); 
+
+        setTimeout(function(){
+            $('body').addClass('loaded');
+        }, 2000);
+    });
+
     $(document).ready(function () {
         $.ajaxSetup({
             headers: {

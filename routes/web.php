@@ -32,5 +32,5 @@ Route::post('/registarcontacto','EnderecoController@addcontacto');
 Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@getLogout']);
 //
 //// Registration routes...
-//Route::get('register', 'Auth\AuthController@getRegister');
+Route::get('register', 'Auth\AuthController@getRegister');
 //Route::post('registar', ['as' => 'auth/register', 'uses' => 'Auth\AuthController@postRegister']);
