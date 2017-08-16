@@ -7,7 +7,7 @@
                 <div class="card-content">
                     <span class="card-title">Registo de Contacto</span>
                     <div class="row">
-                        <form class="col s12" id="addcontacto" method="POST" accept-charset="UTF-8">
+                        <form class="col s12" id="addcontacto" method="POST" action="/contacto" accept-charset="UTF-8">
                             {{csrf_field()}}
                             <div class="row">
                                 <div class="input-field col s6">
