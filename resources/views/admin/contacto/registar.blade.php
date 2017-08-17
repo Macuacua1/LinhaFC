@@ -41,7 +41,7 @@
                             <div class="row">
                                 <div class="input-field col s12 col m4">
                                     <div class="form-group">
-                                    <select id="provincia_id" name="provincia_id" class="provincia">
+                                    <select id="provincia-id" name="provincia_id" class="provincia">
                                         {{--<option value="" disabled selected>Choose your option</option>--}}
                                         @foreach($prov as $pro)
                                             <option value="{{$pro->id}}">{{$pro->provincianome}}</option>
@@ -52,7 +52,7 @@
                                 </div>
                                 <div class="input-field col s12 col m4">
                                     <div class="form-group">
-                                    <select  class="distritonome" name="distrito_id">
+                                    <select id="distrito"  class="distritonome" name="distrito_id">
                                         <option value="0" disabled="true" selected="true">Distrito</option>
                                     </select>
                                     <label>Distrito</label>
