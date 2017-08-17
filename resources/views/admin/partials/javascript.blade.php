@@ -30,6 +30,13 @@
 <script type="text/javascript">
 
     $(document).ready(function(){
+
+        $('select').material_select();
+
+        $('select').on('contentChanged', function() {
+        // re-initialize (update)
+            $(this).material_select();
+        });
 //        $.ajaxSetup({
 //            headers: {
 //                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -67,36 +74,26 @@
 //        })
 
 //        alert('Script lido com sucesso');
-        $(document).on('change','.provincia',function(){
+        $('#provincia-id').on('change',function(){
             alert('Changed com sucesso');
-            // console.log("hmm its change");
 
-            var prov_id=$(this).val();
+            var prov_id = $(this).val();
             alert(prov_id);
             var div=$(this).parent();
-
-            var op=" ";
 
             $.ajax({
                 type:'get',
                 url:'{!!URL::to('findDistrito')!!}',
                 data:{'id':prov_id},
                 success:function(data){
-                    //console.log('success');
-
-                    //console.log(data);
-
-                    //console.log(data.length);
-                    op+='<option value="0" selected disabled>--Escolhe o Distrito--</option>';
                     for(var i=0;i<data.length;i++){
-                        op+='<option name="distrito_id" value="'+data[i].id+'">'+data[i].distritonome+'</option>';
+                        $('#distrito').append('<option value="'+data[i].id+'">'+data[i].distritonome+'</option>');
                     }
-                    //                   alert(op);
-                    div.find('.distritonome').html(" ");
-                    div.find('.distritonome').append(op);
+
+                    $('#distrito').trigger('contentChanged');
                 },
-                error:function(){
-                    alert('erro encontrado');
+                error:function(err){
+                    alert('erro encontrado'+err);
                 }
             });
         });
