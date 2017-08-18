@@ -37,52 +37,13 @@
         // re-initialize (update)
             $(this).material_select();
         });
-//        $.ajaxSetup({
-//            headers: {
-//                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-//            }
-//        });
 
-//        $('#registar-contacto').on('click', function (e) {
-//            alert('Heheehehehehy');
-//            e.preventDefault();
-//
-//            var dados = $('#addcontacto').serialize();
-//
-//            $.ajax({
-//                method: 'Post',
-//                url: '/registarcontacto',
-////                enctype: 'multipart/form-data',
-//                data: dados,
-//                success: function (data) {
-//
-//                    if (data) {
-//
-//                        setTimeout(function(){ Materialize.toast('Registado com Sucesso!', 4000) }, 4000);
-//                        $('#addcontacto')[0].reset();
-////                        window.location.href = '/';
-//                        alert('Salvo com Sucesso!');
-//
-//                    }
-//                    else {
-//                        alert(error)
-//
-//                    }
-//                }
-//            });
-//
-//        })
-
-//        alert('Script lido com sucesso');
         $('#provincia-id').on('change',function(){
-            alert('Changed com sucesso');
-
             var prov_id = $(this).val();
-            alert(prov_id);
             var div=$(this).parent();
 
             $.ajax({
-                type:'get',
+                type:'post',
                 url:'{!!URL::to('findDistrito')!!}',
                 data:{'id':prov_id},
                 success:function(data){
@@ -98,31 +59,22 @@
             });
         });
 
-        $(document).on('change','.distritonome',function(){
-            console.log("hmm its change");
-
+        $('#distrito').on('change',function(){
             var distr_id=$(this).val();
-            // console.log(cat_id);
             var div=$(this).parent();
 
-            var op=" ";
-
             $.ajax({
-                type:'get',
+                type:'post',
                 url:'{!!URL::to('findLocalidade')!!}',
                 data:{'id':distr_id},
                 success:function(data){
-
-                    op+='<option value="0" selected disabled>--Escolhe a Localidade--</option>';
                     for(var i=0;i<data.length;i++){
-                        op+='<option name="localidade_id" value="'+data[i].id+'">'+data[i].localidadenome+'</option>';
+                        $('#localidade').append('<option value="'+data[i].id+'">'+data[i].localidadenome+'</option>');
                     }
-
-                    div.find('.localidadenome').html(" ");
-                    div.find('.localidadenome').append(op);
+                    $('#localidade').trigger('contentChanged');
                 },
-                error:function(){
-
+                error:function(err){
+                    alert('erro encontrado'+err);
                 }
             });
         });

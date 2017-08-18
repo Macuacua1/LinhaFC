@@ -19,8 +19,8 @@ Route::get('/home', function () {
 });
 Auth::routes();
 Route::get('/','EnderecoController@provfunct');
-Route::get('/findDistrito','EnderecoController@findDistrito');
-Route::get('/findLocalidade','EnderecoController@findLocalidade');
+Route::post('/findDistrito','EnderecoController@findDistrito');
+Route::post('/findLocalidade','EnderecoController@findLocalidade');
 Route::post('/criar-conta','UserController@criarConta');
 Route::get('perfil','UserController@getPerfil');
 Route::resource('contacto','ContactoController');

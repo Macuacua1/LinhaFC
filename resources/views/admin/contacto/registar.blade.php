@@ -60,7 +60,7 @@
                                 </div>
                                 <div class="input-field col s12 col m4">
                                     <div class="form-group">
-                                    <select class="localidadenome" name="localidade_id">
+                                    <select id="localidade" class="localidadenome" name="localidade_id">
                                         <option value="0" disabled="true" selected="true">Localidade</option>
                                     </select>
                                     <label>Localidade</label>
