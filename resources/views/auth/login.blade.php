@@ -99,7 +99,7 @@
                                         <label for="password">Password</label>
                                     </div>
                                     <div class="col s12 right-align m-t-sm">
-                                        <a type="submit" id="log-user" class="waves-effect waves-grey btn-flat">sign up</a>
+                                        <a href="/register" type="submit" id="reg-user" class="waves-effect waves-grey btn-flat">sign up</a>
                                         <a type="submit" id="log-user" class="waves-effect waves-light btn teal">sign in</a>
                                     </div>
                                 </form>
@@ -118,42 +118,42 @@
 <script src="/js/alpha.min.js"></script>
 
 
-<script>
-$(document).ready(function () {
-$.ajaxSetup({
-headers: {
-'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-}
-});
+        <script>
+            $(document).ready(function () {
+                    $.ajaxSetup({
+                    headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                    });
 
-$('#log-user').on('click', function (e) {
-e.preventDefault();
+                    $('#log-user').on('click', function (e) {
+                    e.preventDefault();
 
-var dados = $('#form-login').serialize();
+                    var dados = $('#form-login').serialize();
 
-$.ajax({
-method: 'Post',
-url: '/login',
-//                enctype: 'multipart/form-data',
-data: dados,
-success: function (data) {
-//
-if (data) {
-    window.location.href = '/';
+                    $.ajax({
+                    method: 'Post',
+                    url: '/login',
+                    //                enctype: 'multipart/form-data',
+                    data: dados,
+                    success: function (data) {
+                    //
+                    if (data) {
+                        window.location.href = '/';
 
-}
-else {
-    window.location.href = '/login';
+                    }
+                    else {
+                        window.location.href = '/login';
 
-}
-}
-});
+                    }
+                    }
+                    });
 
-})
+            })
 
 
-});
-</script>
+            });
+        </script>
 
 
 </body>

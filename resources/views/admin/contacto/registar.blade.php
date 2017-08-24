@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="input-field col s6">
                                     {{--<i class="material-icons prefix">account_circle</i>--}}
-                                    <input id="icon_prefix" type="text" name="apelido[]" class="validate">
+                                    <input id="icon_prefix" type="text" name="apelido" class="validate">
                                     <label for="icon_prefix">Apelido</label>
                                 </div>
                             </div>

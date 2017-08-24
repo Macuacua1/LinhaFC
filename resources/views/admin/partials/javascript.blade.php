@@ -38,6 +38,18 @@
             $(this).material_select();
         });
 
+        $('.modal').modal({
+            dismissible:false,
+            in_duration:3000,
+            out_duration:3000,
+            opacity:.9
+//            read:function () {
+//              alert('Open');
+//            },
+//            complete:function () {
+//                alert('Complete');
+//            },
+        });
         $('#provincia-id').on('change',function(){
             var prov_id = $(this).val();
             var div=$(this).parent();
@@ -148,7 +160,7 @@
                         setTimeout(function(){ Materialize.toast('Registado com Sucesso!', 4000) }, 4000);
                         $('#addcontacto')[0].reset();
 //                        window.location.href = '/';
-                        alert('Salvo com Sucesso!');
+//                        alert('Salvo com Sucesso!');
 
                     }
                     else {

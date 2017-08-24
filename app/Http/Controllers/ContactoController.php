@@ -25,7 +25,8 @@ class ContactoController extends Controller
      */
     public function create()
     {
-        return view('admin/contacto/registar');
+//        return view('admin/contacto/registar');
+        return view('admin/contacto/reg_contacto');
     }
 
     /**

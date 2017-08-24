@@ -4,6 +4,7 @@
 <!-- Mirrored from steelcoders.com/alpha/v1.2/sign-up.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Jul 2017 11:05:09 GMT -->
 <head>
 
+    <!-- Title -->
     <title>Linha Fala Criança</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -14,10 +15,14 @@
     <meta name="author" content="Linha Fala Criança / UNICEF Mozambique">
     <link rel="icon" href="/img/lfc_logo.png">
 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
     <!-- Styles -->
-    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/materialPreloader.min.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
 
 
     <!-- Theme Styles -->
@@ -103,7 +108,7 @@
                                         <label for="password-confirm">Confirm Password</label>
                                     </div>
                                     <div class="col s12 right-align m-t-sm">
-                                        <a  class="waves-effect waves-grey btn-flat" style="font-size: 12px!important;">Login</a>
+                                        <a href="/login" class="waves-effect waves-grey btn-flat" style="font-size: 12px!important;">Login</a>
                                         <a href="" type="submit" id="registar-user" class="waves-effect waves-light btn teal" style="font-size: 12px!important;">Registar</a>
                                     </div>
                                 </form>
@@ -117,8 +122,6 @@
 </div>
 
 <!-- Javascripts -->
-<script src="/js/jquery-2.2.0.min.js"></script>
-<script src="/js/materialize.min.js"></script>
 <script src="/js/materialPreloader.min.js"></script>
 <script src="/js/jquery.blockui.js"></script>
 <script src="/js/alpha.min.js"></script>

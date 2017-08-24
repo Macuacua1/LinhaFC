@@ -17,7 +17,7 @@ class EnderecoController extends Controller
 
         $prov=Provincia::all();//get data from table
 //        dd($prov);
-        return view('admin/contacto/registar',compact('prov'));//sent data to view
+        return view('admin/contacto/reg_contacto',compact('prov'));//sent data to view
 
     }
 

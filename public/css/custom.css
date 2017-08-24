@@ -1,1 +1,8 @@
-/* Write your custom CSS here */
+.selectsize{
+    font-size: 14px!important;
+}
+.input-field.col label{
+/*color: #32c787 !important;*/
+    /*color: #00acc1 !important;*/
+    /*color: blue !important;*/
+}

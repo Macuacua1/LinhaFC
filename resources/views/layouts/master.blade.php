@@ -19,16 +19,28 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/MetroJs.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" integrity="sha256-IPtNBA1od/cGBfXTxYDxuT5+Y2BKy14o6j0FaIXDmYk=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">       
-    
+    {{--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">--}}
+    <link href="/css/materialize.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js" integrity="sha256-SHXnnZAbgSEf+OBhDLR7I2mx9vNZAIzPeCGhxRV+VQw=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha256-JtQPj/3xub8oapVMaIijPNoM0DHoAtgh/gwFYuN5rik=" crossorigin="anonymous"></script>
-    {{--<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css"/>--}}
-    {{--<link href="/css/select2.css" rel="stylesheet">--}}
-    {{--<link href="/css/select2.min.css" rel="stylesheet">--}}
-{{--<link href="/css/weather-icons.min.css" rel="stylesheet">--}}
+     <style>
+         body {
+             font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
+             font-size: 14px;
+             line-height: 1.42857143;
+             color: #333;
+             background-color: #fff;
+         }
+         .intro-text{
+             padding: 100px;
+         }
+         h3 {
+             font-size: 24px;
+         }
+
+     </style>
 
 
     <!-- Theme Styles -->
@@ -36,9 +48,6 @@
     <link href="/css/custom.css" rel="stylesheet" type="text/css"/>
 
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
     <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
@@ -674,185 +683,7 @@
 {{--<script src="/js/select2.full.min.js"></script>--}}
 {{--<script src="/js/init.js"></script>--}}
 {{----}}
-{{--<script type="text/javascript">--}}
 
-    {{--$(document).ready(function(){--}}
-{{--//        $.ajaxSetup({--}}
-{{--//            headers: {--}}
-{{--//                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')--}}
-{{--//            }--}}
-{{--//        });--}}
-
-{{--//        $('#registar-contacto').on('click', function (e) {--}}
-{{--//            alert('Heheehehehehy');--}}
-{{--//            e.preventDefault();--}}
-{{--//--}}
-{{--//            var dados = $('#addcontacto').serialize();--}}
-{{--//--}}
-{{--//            $.ajax({--}}
-{{--//                method: 'Post',--}}
-{{--//                url: '/registarcontacto',--}}
-{{--////                enctype: 'multipart/form-data',--}}
-{{--//                data: dados,--}}
-{{--//                success: function (data) {--}}
-{{--//--}}
-{{--//                    if (data) {--}}
-{{--//--}}
-{{--//                        setTimeout(function(){ Materialize.toast('Registado com Sucesso!', 4000) }, 4000);--}}
-{{--//                        $('#addcontacto')[0].reset();--}}
-{{--////                        window.location.href = '/';--}}
-{{--//                        alert('Salvo com Sucesso!');--}}
-{{--//--}}
-{{--//                    }--}}
-{{--//                    else {--}}
-{{--//                        alert(error)--}}
-{{--//--}}
-{{--//                    }--}}
-{{--//                }--}}
-{{--//            });--}}
-{{--//--}}
-{{--//        })--}}
-
-    {{--alert('Script lido com sucesso');--}}
-    {{--$(document).on('change','.provincia',function(){--}}
-    {{--alert('Changed com sucesso');--}}
-    {{--// console.log("hmm its change");--}}
-
-    {{--var prov_id=$(this).val();--}}
-    {{--alert(prov_id);--}}
-    {{--var div=$(this).parent();--}}
-
-    {{--var op=" ";--}}
-
-    {{--$.ajax({--}}
-    {{--type:'get',--}}
-    {{--url:'{!!URL::to('findDistrito')!!}',--}}
-    {{--data:{'id':prov_id},--}}
-    {{--success:function(data){--}}
-    {{--//console.log('success');--}}
-
-    {{--//console.log(data);--}}
-
-    {{--//console.log(data.length);--}}
-    {{--op+='<option value="0" selected disabled>--Escolhe o Distrito--</option>';--}}
-    {{--for(var i=0;i<data.length;i++){--}}
-    {{--op+='<option value="'+data[i].id+'">'+data[i].distritonome+'</option>';--}}
-    {{--}--}}
-    {{--//                   alert(op);--}}
-    {{--div.find('.distritonome').html(" ");--}}
-    {{--div.find('.distritonome').append(op);--}}
-    {{--},--}}
-    {{--error:function(){--}}
-    {{--alert('erro encontrado');--}}
-    {{--}--}}
-    {{--});--}}
-    {{--});--}}
-
-
-    {{--$(document).on('change','.distritonome',function(){--}}
-    {{--console.log("hmm its change");--}}
-
-    {{--var distr_id=$(this).val();--}}
-    {{--// console.log(cat_id);--}}
-    {{--var div=$(this).parent();--}}
-
-    {{--var op=" ";--}}
-
-    {{--$.ajax({--}}
-    {{--type:'get',--}}
-    {{--url:'{!!URL::to('findLocalidade')!!}',--}}
-    {{--data:{'id':distr_id},--}}
-    {{--success:function(data){--}}
-
-    {{--op+='<option value="0" selected disabled>--Escolhe a Localidade--</option>';--}}
-    {{--for(var i=0;i<data.length;i++){--}}
-    {{--op+='<option value="'+data[i].id+'">'+data[i].localidadenome+'</option>';--}}
-    {{--}--}}
-
-    {{--div.find('.localidadenome').html(" ");--}}
-    {{--div.find('.localidadenome').append(op);--}}
-    {{--},--}}
-    {{--error:function(){--}}
-
-    {{--}--}}
-    {{--});--}}
-    {{--});--}}
-
-    {{--});--}}
-    {{--</script>--}}
-{{--<script type="text/javascript">--}}
-
-    {{--$("#case").hide();--}}
-    {{--$("#notcase").hide();--}}
-    {{--$("#addmorepessoas").hide();--}}
-    {{--$("#addmorepessoas1").hide();--}}
-    {{--$("#addmorepessoas2").hide();--}}
-    {{--function showHidecaso() {--}}
-        {{--if(document.getElementById('naocaso').checked) {--}}
-            {{--$("#case").show();--}}
-            {{--$("#notcase").hide();--}}
-            {{--$("#addmorepessoas").hide();--}}
-            {{--$("#addmorepessoas1").hide();--}}
-            {{--$("#addmorepessoas2").hide()--}}
-        {{--} else {--}}
-            {{--$("#notcase").show();--}}
-            {{--$("#case").hide();--}}
-        {{--}--}}
-    {{--}--}}
-
-    {{--function addpessoa() {--}}
-        {{--if(document.getElementById('addpessoas').checked) {--}}
-            {{--$("#addmorepessoas").show();--}}
-            {{--$("#addmorepessoas1").show();--}}
-            {{--$("#addmorepessoas2").show();--}}
-        {{--}else {--}}
-            {{--$("#addmorepessoas").hide();--}}
-            {{--$("#addmorepessoas1").hide();--}}
-            {{--$("#addmorepessoas2").hide();--}}
-        {{--}--}}
-    {{--}--}}
-{{--</script>--}}
-{{--<script>--}}
-    {{--$(document).ready(function () {--}}
-        {{--$.ajaxSetup({--}}
-            {{--headers: {--}}
-                {{--'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')--}}
-            {{--}--}}
-        {{--});--}}
-
-        {{--$('#registar-contacto').on('click', function (e) {--}}
-            {{--alert('Heheehehehehy');--}}
-            {{--e.preventDefault();--}}
-
-            {{--var dados = $('#addcontacto').serialize();--}}
-
-            {{--$.ajax({--}}
-                {{--method: 'Post',--}}
-                {{--url: '/registarcontacto',--}}
-{{--//                enctype: 'multipart/form-data',--}}
-                {{--data: dados,--}}
-                {{--success: function (data) {--}}
-
-                    {{--if (data) {--}}
-
-                        {{--setTimeout(function(){ Materialize.toast('Registado com Sucesso!', 4000) }, 4000);--}}
-                        {{--$('#addcontacto')[0].reset();--}}
-{{--//                        window.location.href = '/';--}}
-                        {{--alert('Salvo com Sucesso!');--}}
-
-                    {{--}--}}
-                    {{--else {--}}
-                        {{--alert(error)--}}
-
-                    {{--}--}}
-                {{--}--}}
-            {{--});--}}
-
-        {{--})--}}
-
-
-    {{--});--}}
-{{--</script>--}}
 @include('admin.partials.javascript')
 </body>
 
