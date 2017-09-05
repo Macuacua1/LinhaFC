@@ -20,14 +20,14 @@ class CreateUtentesTable extends Migration
             $table->string('apelido')->nullable();
             $table->string('idade')->nullable();
             $table->string('genero')->nullable();
-            $table->string('email')->nullable();
+//            $table->string('email')->nullable();
             $table->string('idioma')->nullable();
             $table->string('cell1')->nullable();
             $table->string('cell2')->nullable();
-            $table->string('cell3')->nullable();
+//            $table->string('cell3')->nullable();
             $table->string('conhecer_linha')->nullable();
             $table->string('descricao_local')->nullable();
-            $table->string('bi')->nullable();
+//            $table->string('bi')->nullable();
             $table->string('descricao_utente')->nullable();
             $table->string('situacao_educacional')->nullable();
             $table->string('vive_com')->nullable();

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tipo_Motivo extends Model
 {
+    protected $table='tipo_motivo';
     protected $fillable = ['tipomotivonome'];
 
     public function motivo(){

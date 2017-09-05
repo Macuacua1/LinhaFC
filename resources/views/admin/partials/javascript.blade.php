@@ -24,20 +24,20 @@
 {{--<script src="/js/form-select2.js"></script>--}}
 <script src="/js/form-input-mask.js"></script>
 <script src="/js/jquery.inputmask.bundle.js"></script>
-{{--<script src="/js/select2.full.min.js"></script>--}}
-{{--<script src="/js/init.js"></script>--}}
-{{----}}
+<script src="/js/jquery.dataTables.min.js"></script>
+<script src="/js/table-data.js"></script>
+
 <script type="text/javascript">
 
     $(document).ready(function(){
-
+//Inicializacao dos Selects
         $('select').material_select();
 
         $('select').on('contentChanged', function() {
         // re-initialize (update)
             $(this).material_select();
         });
-
+//Chamar a modal
         $('.modal').modal({
             dismissible:false,
             in_duration:3000,
@@ -50,6 +50,7 @@
 //                alert('Complete');
 //            },
         });
+//        $('.chips').material_chip();
         $('#provincia-id').on('change',function(){
             var prov_id = $(this).val();
             var div=$(this).parent();
@@ -91,63 +92,78 @@
             });
         });
 
+//        Find motivo
+
+        $('#categoriamotivo').on('change',function(){
+            var mot_id = $(this).val();
+            var div=$(this).parent();
+
+            $.ajax({
+                type:'post',
+                url:'{!!URL::to('findmotivo')!!}',
+                data:{'id':mot_id},
+                success:function(data){
+                    for(var i=0;i<data.length;i++){
+                        $('#motivo').append('<option value="'+data[i].id+'">'+data[i].motivonome+'</option>');
+                    }
+
+                    $('#motivo').trigger('contentChanged');
+                },
+                error:function(err){
+                    alert('erro encontrado'+err);
+                }
+            });
+        });
     });
+
 </script>
+
+{{--Mostrar e omitir divs de acordo com a categoria do contacto--}}
 <script type="text/javascript">
 
-    $("#case").hide();
-    $("#notcase").hide();
-    $("#addmorepessoas").hide();
-    $("#addmorepessoas1").hide();
-    $("#addmorepessoas2").hide();
+    $("#iscaso").hide();
+    $("#notcaso").hide();
+    $("#iscasoo").hide();
     function showHidecaso() {
         if(document.getElementById('naocaso').checked) {
-            $("#case").show();
-            $("#notcase").hide();
-            $("#addmorepessoas").hide();
-            $("#addmorepessoas1").hide();
-            $("#addmorepessoas2").hide()
-        } else {
-            $("#notcase").show();
-            $("#case").hide();
-        }
-    }
+            $("#notcaso").show();
+            $("#iscaso").hide();
+            $("#iscasoo").hide();
 
-    function addpessoa() {
-        if(document.getElementById('addpessoas').checked) {
-            $("#addmorepessoas").show();
-            $("#addmorepessoas1").show();
-            $("#addmorepessoas2").show();
-        }else {
-            $("#addmorepessoas").hide();
-            $("#addmorepessoas1").hide();
-            $("#addmorepessoas2").hide();
+        } else {
+            $("#notcaso").hide();
+            $("#iscaso").show();
+            $("#iscasoo").show();
+            $('.chips').material_chip();
+
         }
     }
 </script>
+
+{{--Funcao Loader da pagina--}}
 <script>
 
     $(window).on('load', function() {
-        //  $('.preloader-background').delay(1700).fadeOut('slow'); 
+//          $('.preloader-background').delay(1700).fadeOut('slow');
 
         setTimeout(function(){
             $('body').addClass('loaded');
         }, 2000);
     });
-
+//Token via ajax
     $(document).ready(function () {
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
-
+//Registar contacto
         $('#registar-contacto').on('click', function (e) {
-            alert('Heheehehehehy');
+//            alert('Heheehehehehy');
             e.preventDefault();
 
             var dados = $('#addcontacto').serialize();
-
+//            alert(dados);
             $.ajax({
                 method: 'Post',
                 url: '/registarcontacto',
@@ -160,7 +176,7 @@
                         setTimeout(function(){ Materialize.toast('Registado com Sucesso!', 4000) }, 4000);
                         $('#addcontacto')[0].reset();
 //                        window.location.href = '/';
-//                        alert('Salvo com Sucesso!');
+//                        alert(dados);
 
                     }
                     else {
@@ -172,6 +188,23 @@
 
         })
 
+
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        $('.modal-footer').on('click', '#add', function() {
+            var dados = $('#form_add').serialize();
+//            alert(dados);
+            $.ajax({
+                type: 'post',
+                url: '/addUtente',
+                data: dados,
+                success: function(data) {
+                    $('#form_add')[0].reset();
+                }
+            });
+        });
 
     });
 </script>

@@ -85,7 +85,7 @@
         <div class="valign">
             <div class="row">
                 <div class="col s12 m6 l4 offset-l4 offset-m3">
-                    <div class="card white darken-1">
+                    <div class="card white darken-1" style="width: 400px!important;">
                         <div class="card-content ">
                             <span class="card-title">Login</span>
                             <div class="row">

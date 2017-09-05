@@ -21,26 +21,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" integrity="sha256-IPtNBA1od/cGBfXTxYDxuT5+Y2BKy14o6j0FaIXDmYk=" crossorigin="anonymous" />
     {{--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">--}}
     <link href="/css/materialize.min.css" rel="stylesheet">
+    <link href="/css/jquery.dataTables.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js" integrity="sha256-SHXnnZAbgSEf+OBhDLR7I2mx9vNZAIzPeCGhxRV+VQw=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha256-JtQPj/3xub8oapVMaIijPNoM0DHoAtgh/gwFYuN5rik=" crossorigin="anonymous"></script>
-     <style>
-         body {
-             font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
-             font-size: 14px;
-             line-height: 1.42857143;
-             color: #333;
-             background-color: #fff;
-         }
-         .intro-text{
-             padding: 100px;
-         }
-         h3 {
-             font-size: 24px;
-         }
-
-     </style>
 
 
     <!-- Theme Styles -->
@@ -96,8 +81,8 @@
     </div>
 </div>
 <div class="mn-content fixed-sidebar">
-    <header class="mn-header navbar-fixed" style="background-color: #32c787 !important;">
-        <nav class="cyan darken-1"  style="background-color: #32c787 !important;">
+    <header class="mn-header navbar-fixed" style="background-color: #32c787 !important;margin-top: -5px!important;padding-top: 0!important;">
+        <nav class="cyan darken-1"  style="background-color: #32c787 !important;margin-top: 0!important;padding-top: 0!important;">
             <div class="nav-wrapper row">
                 <section class="material-design-hamburger navigation-toggle">
                     <a href="javascript:void(0)" data-activates="slide-out" class="button-collapse show-on-large material-design-hamburger__icon">
@@ -116,8 +101,13 @@
                 </form>
                 <ul class="right col s9 m3 nav-right-menu">
                     <li><a href="javascript:void(0)" data-activates="chat-sidebar" class="chat-button show-on-large"><i class="material-icons">more_vert</i></a></li>
-                    <li class="hide-on-small-and-down"><a href="javascript:void(0)" data-activates="dropdown1" class="dropdown-button dropdown-right show-on-large"><i class="material-icons">notifications_none</i><span class="badge">4</span></a></li>
-                    <li class="hide-on-med-and-up"><a href="javascript:void(0)" class="search-toggle"><i class="material-icons">search</i></a></li>
+                    @if(Session::has('utentes'))
+                    <li class="hide-on-small-and-down"><a href="javascript:void(0)" data-activates="dropdown1" class="dropdown-button dropdown-right show-on-large"><i class="material-icons">notifications_none</i><span class="badge">{{count(Session::get('utentes'))}}</span></a></li>
+                    @else
+                        <li class="hide-on-small-and-down"><a href="javascript:void(0)" data-activates="dropdown1" class="dropdown-button dropdown-right show-on-large"><i class="material-icons">notifications_none</i></a></li>
+
+                    @endif
+                        <li class="hide-on-med-and-up"><a href="javascript:void(0)" class="search-toggle"><i class="material-icons">search</i></a></li>
                 </ul>
 
                 <ul id="dropdown1" class="dropdown-content notifications-dropdown">
@@ -532,7 +522,7 @@
                 <div class="sidebar-profile-info">
                     <a href="javascript:void(0);" class="account-settings-link">
                         <p>{{Auth::user()->nome}}</p>
-                        <span>{{Auth::user()->email}}<i class="material-icons right">arrow_drop_down</i></span>
+                        <span>{{Auth::user()->role->rolenome}}<i class="material-icons right">arrow_drop_down</i></span>
                     </a>
                 </div>
             </div>
@@ -555,67 +545,39 @@
                     <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">account_circle</i>Utilizadores<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
                     <div class="collapsible-body">
                         <ul>
-                            <li><a href="layout-blank.html">Blank Page</a></li>
-                            <li><a href="layout-boxed.html">Boxed Layout</a></li>
-                            <li><a href="layout-hidden-sidebar.html">Hidden Sidebar</a></li>
-                            <li><a href="layout-right-sidebar.html">Right Sidebar</a></li>
+                            <li><a href="{{url('user')}}">Listar</a></li>
+
                         </ul>
                     </div>
                 </li>
-                @elseif(Auth::user()->role_id=2)
-                <li class="no-padding">
-                    <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">mode_edit</i>Forms<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li><a href="form-elements.html">Form Elements</a></li>
-                            <li><a href="form-wizard.html">Form Wizard</a></li>
-                            <li><a href="form-upload.html">File Upload</a></li>
-                            <li><a href="form-image-crop.html">Image Crop</a></li>
-                            <li><a href="form-image-zoom.html">Image Zoom</a></li>
-                            <li><a href="form-input-mask.html">Input Mask</a></li>
-                            <li><a href="form-select2.html">Select2</a></li>
-                        </ul>
-                    </div>
-                </li>
-                    {{--@endif--}}
-                @elseif(Auth::user()->role_id=3)
-                <li class="no-padding">
-                    <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">grid_on</i>Tables<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li><a href="table-static.html">Static Tables</a></li>
-                            <li><a href="table-responsive.html">Responsive Tables</a></li>
-                            <li><a href="table-comparison.html">Comparison Table</a></li>
-                            <li><a href="table-data.html">Data Tables</a></li>
-                        </ul>
-                    </div>
-                </li>
-                    {{--@endif--}}
-                @else
-                <li class="no-padding"><a class="waves-effect waves-grey" href="charts.html"><i class="material-icons">trending_up</i>Charts</a></li>
-                <li class="no-padding">
-                    <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">tag_faces</i>Extra Pages<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li><a href="404.html">404 Page</a></li>
-                            <li><a href="500.html">500 Page</a></li>
-                            <li><a href="invoice.html">Invoice</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                            <li><a href="sign-in.html">Sign In</a></li>
-                            <li><a href="sign-up.html">Sign Up</a></li>
-                            <li><a href="lock-screen.html">Lock Screen</a></li>
-                            <li><a href="pattern-lock-screen.html">Pattern Lock Screen</a></li>
-                            <li><a href="forgot.html">Forgot Password</a></li>
-                            <li><a href="pricing-tables.html">Pricing Tables</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="timeline.html">Timeline</a></li>
-                            <li><a href="calendar.html">Calendar</a></li>
-                            <li><a href="coming-soon.html">Coming Soon</a></li>
-                        </ul>
-                    </div>
-                </li>
-                    @endif
+                    <li class="no-padding">
+                        <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">account_circle</i>Contactos<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a href="{{url('contacto')}}">Listar</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="no-padding">
+                        <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">account_circle</i>Casos<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a href="{{url('caso')}}">Listar</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="no-padding">
+                        <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">account_circle</i>Estatisticas<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a href="{{url('user')}}">Listar</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                @endif
 
             </ul>
             <div class="footer">
@@ -631,14 +593,14 @@
         @yield('content')
 
         </div>
-        <div class="inner-sidebar">
-            <span class="inner-sidebar-title">New Messages</span>
+        <div class="inner-sidebar" style="position: fixed!important;margin-left: 860px;width: 100%">
+            <span class="inner-sidebar-title">Recentes</span>
             <div class="message-list">
                 <div class="info-item message-item"><img class="circle" src="/img/lfc_logo_name.png" alt=""><div class="message-info"><div class="message-author">Ned Flanders</div><small>3 hours ago</small></div></div>
                 <div class="info-item message-item"><img class="circle" src="/img/lfc_logo_name.png" alt=""><div class="message-info"><div class="message-author">Peter Griffin</div><small>4 hours ago</small></div></div>
                 <div class="info-item message-item"><img class="circle" src="/img/lfc_logo_name.png" alt=""><div class="message-info"><div class="message-author">Lisa Simpson</div><small>2 days ago</small></div></div>
             </div>
-            <span class="inner-sidebar-title">Events</span>
+            <span class="inner-sidebar-title">Recentes</span>
             <span class="info-item">Envato meeting<span class="new badge">12</span></span>
             <div class="inner-sidebar-divider"></div>
             <span class="info-item">Google I/O</span>

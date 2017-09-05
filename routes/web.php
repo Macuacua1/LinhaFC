@@ -21,10 +21,14 @@ Auth::routes();
 Route::get('/','EnderecoController@provfunct');
 Route::post('/findDistrito','EnderecoController@findDistrito');
 Route::post('/findLocalidade','EnderecoController@findLocalidade');
+Route::post('/findmotivo','EnderecoController@findmotivo');
 Route::post('/criar-conta','UserController@criarConta');
 Route::get('perfil','UserController@getPerfil');
 Route::resource('contacto','ContactoController');
-Route::post('/registarcontacto','EnderecoController@addcontacto');
+Route::resource('user','UserController');
+Route::post('/registarcontacto','ContactoController@addcontacto');
+Route::post('/addUtente','ContactoController@addUtente');
+//Route::get('/updateUser/{id}','UserController@updateUser');
 //Route::post('/register','Auth/RegisterController@register');
 
 //Route::get('login', 'Auth\AuthController@getLogin');

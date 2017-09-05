@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Distrito;
 use App\Localidade;
+use App\Motivo;
 use App\Provincia;
+use App\Tipo_Motivo;
 use Illuminate\Http\Request;
 
 class EnderecoController extends Controller
@@ -16,8 +18,9 @@ class EnderecoController extends Controller
     public function provfunct(){
 
         $prov=Provincia::all();//get data from table
+        $motiv= Tipo_Motivo::all();
 //        dd($prov);
-        return view('admin/contacto/reg_contacto',compact('prov'));//sent data to view
+        return view('admin/contacto/reg_contacto',compact('prov'),compact('motiv'));//sent data to view
 
     }
 
@@ -42,8 +45,9 @@ class EnderecoController extends Controller
         $data=Localidade::select('localidadenome','id')->where('distrito_id',$request->id)->get();
         return response()->json($data);//then sent this data to ajax success
     }
-public function addcontacto(Request $request){
-    dd($request->all());
+public function findmotivo(Request $request){
+    $data=Motivo::select('motivonome','id')->where('tipo_motivo_id',$request->id)->get();
+    return response()->json($data);//then sent this data to ajax success
 }
 
 }

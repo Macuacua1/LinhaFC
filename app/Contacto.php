@@ -6,18 +6,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contacto extends Model
 {
-    protected $fillable=['estado_contacto','anonimo','desc_antecedentes','resumo_contacto','impressao_atendente'
-        ,'motivo_id','caso_id'];
+    protected $fillable=['tipo_contacto','anonimo','desc_antecedentes','resumo_contacto','impressao_atendente'
+        ,'motivo_id','caso_id','user_id'];
 
     public function motivo(){
-        return $this->belongsTo(Motivo::class,'motivo_id');
+        return $this->belongsTo(Motivo::class);
     }
     public function caso(){
-        return $this->belongsTo(Caso::class,'caso_id');
+        return $this->belongsTo(Caso::class);
     }
     public function utente(){
-        return $this->belongsToMany(Utente::class,'utente_id');
+        return $this->belongsToMany(Utente::class,'contacto_utente');
     }
-
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 
 }

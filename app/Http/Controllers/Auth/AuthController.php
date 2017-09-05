@@ -113,7 +113,7 @@ class AuthController extends Controller
            'nome' => $data['nome'],
            'email' => $data['email'],
            'password' => bcrypt($data['password']),
-           'avatar' => 'avatar-default.png',
+           'avatar' => 'default',
            'estado' => 'activo'
        ]);
 

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEnvolvidosTable extends Migration
+class CreateContactoUtenteTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,17 @@ class CreateEnvolvidosTable extends Migration
      */
     public function up()
     {
-        Schema::create('envolvidos', function (Blueprint $table) {
+        Schema::create('contacto_utente', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('utente_id')->unsigned()->nullable();
-            $table->foreign('utente_id')->references('id')->on('utentes')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
             $table->integer('contacto_id')->unsigned()->nullable();
             $table->foreign('contacto_id')->references('id')->on('contactos')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
+            $table->integer('utente_id')->unsigned()->nullable();
+            $table->foreign('utente_id')->references('id')->on('utentes')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
             $table->timestamps();
         });
     }
@@ -34,6 +35,6 @@ class CreateEnvolvidosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('envolvidos');
+        Schema::dropIfExists('contacto_utente');
     }
 }

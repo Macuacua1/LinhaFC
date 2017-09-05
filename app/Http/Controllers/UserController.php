@@ -16,7 +16,7 @@ class UserController extends Controller
     public function index()
     {
         $users=User::all();
-//        return view('admin.users.index',compact('users'));
+        return view('admin.user.index',compact('users'));
     }
 
     /**
@@ -60,8 +60,8 @@ class UserController extends Controller
     public function edit($id)
     {
        $users=User::findOrFail($id);
-        dd($users);
-        return view('admin.users.edit',compact('users'));
+//        dd($users);
+        return view('admin.user.edit',compact('users'));
 
     }
 
@@ -75,7 +75,10 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $users=User::find($id);
+        $users->fill($request->only(['escritorio','estado','role_id']));
+        $users->save();
+        return redirect()->route('user.index');
     }
 
     /**
@@ -99,7 +102,7 @@ class UserController extends Controller
 
 
         $password = $request->password;
-        $request->request->add(['avatar' => 'avatar-default.png']);
+        $request->request->add(['avatar' => 'default']);
         $request->request->add(['estado' => 'activo']);
         $request->request->add(['password' => bcrypt($request->password)]);
         User::create($request->all());
@@ -111,6 +114,11 @@ class UserController extends Controller
 //        }
 
 //        return response()->json(['msg' => false]);
+    }
+    public function updateUser(Request $request, $id){
+        $users=User::find($id);
+        dd($users);
+
     }
 
 

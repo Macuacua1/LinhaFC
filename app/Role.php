@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Role extends Model
 {
-    protected $fillable = ['rolenome'];
+    protected $fillable = ['rolenome','designacao'];
 
     public function user(){
         return $this->hasMany(User::class);

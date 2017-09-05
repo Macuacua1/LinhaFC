@@ -17,7 +17,7 @@ class CreateMotivosTable extends Migration
             $table->increments('id');
             $table->string('motivonome');
             $table->integer('tipo_motivo_id')->unsigned();
-            $table->foreign('tipo_motivo_id')->references('id')->on('tipo_motivos')
+            $table->foreign('tipo_motivo_id')->references('id')->on('tipo_motivo')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
             $table->timestamps();

@@ -6,3 +6,6 @@
     /*color: #00acc1 !important;*/
     /*color: blue !important;*/
 }
+.modal-trigger{
+    z-index: auto!important;
+}
