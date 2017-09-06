@@ -54,12 +54,14 @@
         $('#provincia-id').on('change',function(){
             var prov_id = $(this).val();
             var div=$(this).parent();
+            $('#distrito').empty();
 
             $.ajax({
                 type:'post',
                 url:'{!!URL::to('findDistrito')!!}',
                 data:{'id':prov_id},
                 success:function(data){
+//                    $('#distrito').empty();
                     for(var i=0;i<data.length;i++){
                         $('#distrito').append('<option value="'+data[i].id+'">'+data[i].distritonome+'</option>');
                     }
@@ -75,12 +77,13 @@
         $('#distrito').on('change',function(){
             var distr_id=$(this).val();
             var div=$(this).parent();
-
+            $('#localidade').empty();
             $.ajax({
                 type:'post',
                 url:'{!!URL::to('findLocalidade')!!}',
                 data:{'id':distr_id},
                 success:function(data){
+//                    $('#localidade').empty();
                     for(var i=0;i<data.length;i++){
                         $('#localidade').append('<option value="'+data[i].id+'">'+data[i].localidadenome+'</option>');
                     }
@@ -97,6 +100,7 @@
         $('#categoriamotivo').on('change',function(){
             var mot_id = $(this).val();
             var div=$(this).parent();
+            $('#motivo').empty();
 
             $.ajax({
                 type:'post',
